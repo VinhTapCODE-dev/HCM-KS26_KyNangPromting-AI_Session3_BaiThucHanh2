@@ -52,29 +52,34 @@ Nếu phản hồi trống hoặc chứa ký tự đặc biệt không đọc đ
 ### Ví dụ 1: Positive
 **INPUT:**
  Giao hàng siêu nhanh, đặt sáng chiều có luôn! Áo đẹp đúng mô tả, rất ưng!!!
+ 
 **OUTPUT:**
 {"sentiment": "Positive", "topics": ["Product", "Delivery"], "score": 5, "summary": "Giao hàng nhanh, sản phẩm đúng mô tả"}
 
 ### Ví dụ 2: Negative
 **INPUT:**
  App đặt hàng bị treo liên tục, mất 30 phút mới thanh toán được. Gọi hotline thì nhân viên trả lời cộc lốc. Quá tệ!
+ 
 **OUTPUT:**
 {"sentiment": "Negative", "topics": ["System", "Service"], "score": 1, "summary": "App treo khi thanh toán, nhân viên hỗ trợ thái độ kém"}
 
 ### Ví dụ 3: Neutral
 **INPUT:**
  Hàng nhận được bình thường, giống mô tả. Giao đúng hẹn.
+ 
 **OUTPUT:**
 {"sentiment": "Neutral", "topics": ["Product", "Delivery"], "score": 3, "summary": "Hàng đúng mô tả, giao đúng hẹn"}
 
 ### Ví dụ 4: Khen giao hàng nhưng chê sản phẩm (multi-tag).
 **INPUT:**
  Shipper giao nhanh lắm nhưng hộp bị móp méo, sản phẩm bên trong trầy xước. Thất vọng!
+ 
 **OUTPUT:**
 {"sentiment": "Negative", "topics": ["Product", "Delivery"], "score": 2, "summary": "Giao hàng nhanh nhưng sản phẩm bị móp méo, trầy xước"}
 
 ### Ví dụ 5: Invalid
 **INPUT:** 
 @@@ ### ???
+
 **OUTPUT:**
 {"sentiment": "Invalid", "topics": ["Invalid"], "score": null, "summary": "Invalid"}
